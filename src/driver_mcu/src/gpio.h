@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include "gpio_afr/gpio_afr.h"
+
 typedef enum{
     MODER_INPUT = 0,
     MODER_OUTPUT = 1,

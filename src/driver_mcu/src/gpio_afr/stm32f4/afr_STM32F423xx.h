@@ -1,0 +1,933 @@
+#ifndef AFR_STM32F423XX_H_included
+#define AFR_STM32F423XX_H_included
+
+//PA0
+#define AFR_PA0_EVENTOUT   AFR_15
+#define AFR_PA0_TIM2_CH1   AFR_1
+#define AFR_PA0_TIM2_ETR   AFR_1
+#define AFR_PA0_TIM5_CH1   AFR_2
+#define AFR_PA0_TIM8_ETR   AFR_3
+#define AFR_PA0_UART4_TX   AFR_8
+#define AFR_PA0_USART2_CTS AFR_7
+
+//PA1
+#define AFR_PA1_EVENTOUT        AFR_15
+#define AFR_PA1_I2S4_SD         AFR_5
+#define AFR_PA1_QUADSPI_BK1_IO3 AFR_9
+#define AFR_PA1_SPI4_MOSI       AFR_5
+#define AFR_PA1_TIM2_CH2        AFR_1
+#define AFR_PA1_TIM5_CH2        AFR_2
+#define AFR_PA1_UART4_RX        AFR_8
+#define AFR_PA1_USART2_RTS      AFR_7
+
+//PA10
+#define AFR_PA10_DFSDM2_DATIN3 AFR_3
+#define AFR_PA10_EVENTOUT      AFR_15
+#define AFR_PA10_I2S2_SD       AFR_5
+#define AFR_PA10_I2S5_SD       AFR_6
+#define AFR_PA10_SPI2_MOSI     AFR_5
+#define AFR_PA10_SPI5_MOSI     AFR_6
+#define AFR_PA10_TIM1_CH3      AFR_1
+#define AFR_PA10_USART1_RX     AFR_7
+#define AFR_PA10_USB_OTG_FS_ID AFR_10
+
+//PA11
+#define AFR_PA11_CAN1_RX       AFR_9
+#define AFR_PA11_DFSDM2_CKIN5  AFR_3
+#define AFR_PA11_EVENTOUT      AFR_15
+#define AFR_PA11_I2S2_WS       AFR_5
+#define AFR_PA11_SPI2_NSS      AFR_5
+#define AFR_PA11_SPI4_MISO     AFR_6
+#define AFR_PA11_TIM1_CH4      AFR_1
+#define AFR_PA11_UART4_RX      AFR_11
+#define AFR_PA11_USART1_CTS    AFR_7
+#define AFR_PA11_USART6_TX     AFR_8
+#define AFR_PA11_USB_OTG_FS_DM AFR_10
+
+//PA12
+#define AFR_PA12_CAN1_TX       AFR_9
+#define AFR_PA12_DFSDM2_DATIN5 AFR_3
+#define AFR_PA12_EVENTOUT      AFR_15
+#define AFR_PA12_SPI2_MISO     AFR_5
+#define AFR_PA12_SPI5_MISO     AFR_6
+#define AFR_PA12_TIM1_ETR      AFR_1
+#define AFR_PA12_UART4_TX      AFR_11
+#define AFR_PA12_USART1_RTS    AFR_7
+#define AFR_PA12_USART6_RX     AFR_8
+#define AFR_PA12_USB_OTG_FS_DP AFR_10
+
+//PA13
+#define AFR_PA13_EVENTOUT       AFR_15
+#define AFR_PA13_SYS_JTMS_SWDIO AFR_0
+
+//PA14
+#define AFR_PA14_EVENTOUT       AFR_15
+#define AFR_PA14_SYS_JTCK_SWCLK AFR_0
+
+//PA15
+#define AFR_PA15_CAN3_TX     AFR_11
+#define AFR_PA15_EVENTOUT    AFR_15
+#define AFR_PA15_I2S1_WS     AFR_5
+#define AFR_PA15_I2S3_WS     AFR_6
+#define AFR_PA15_SAI1_MCLK_A AFR_10
+#define AFR_PA15_SPI1_NSS    AFR_5
+#define AFR_PA15_SPI3_NSS    AFR_6
+#define AFR_PA15_SYS_JTDI    AFR_0
+#define AFR_PA15_TIM2_CH1    AFR_1
+#define AFR_PA15_TIM2_ETR    AFR_1
+#define AFR_PA15_UART7_TX    AFR_8
+#define AFR_PA15_USART1_TX   AFR_7
+
+//PA2
+#define AFR_PA2_EVENTOUT  AFR_15
+#define AFR_PA2_FSMC_D4   AFR_12
+#define AFR_PA2_FSMC_DA4  AFR_12
+#define AFR_PA2_I2S_CKIN  AFR_5
+#define AFR_PA2_TIM2_CH3  AFR_1
+#define AFR_PA2_TIM5_CH3  AFR_2
+#define AFR_PA2_TIM9_CH1  AFR_3
+#define AFR_PA2_USART2_TX AFR_7
+
+//PA3
+#define AFR_PA3_EVENTOUT  AFR_15
+#define AFR_PA3_FSMC_D5   AFR_12
+#define AFR_PA3_FSMC_DA5  AFR_12
+#define AFR_PA3_I2S2_MCK  AFR_5
+#define AFR_PA3_SAI1_SD_B AFR_10
+#define AFR_PA3_TIM2_CH4  AFR_1
+#define AFR_PA3_TIM5_CH4  AFR_2
+#define AFR_PA3_TIM9_CH2  AFR_3
+#define AFR_PA3_USART2_RX AFR_7
+
+//PA4
+#define AFR_PA4_DFSDM1_DATIN1 AFR_8
+#define AFR_PA4_EVENTOUT      AFR_15
+#define AFR_PA4_FSMC_D6       AFR_12
+#define AFR_PA4_FSMC_DA6      AFR_12
+#define AFR_PA4_I2S1_WS       AFR_5
+#define AFR_PA4_I2S3_WS       AFR_6
+#define AFR_PA4_SPI1_NSS      AFR_5
+#define AFR_PA4_SPI3_NSS      AFR_6
+#define AFR_PA4_USART2_CK     AFR_7
+
+//PA5
+#define AFR_PA5_DFSDM1_CKIN1 AFR_8
+#define AFR_PA5_EVENTOUT     AFR_15
+#define AFR_PA5_FSMC_D7      AFR_12
+#define AFR_PA5_FSMC_DA7     AFR_12
+#define AFR_PA5_I2S1_CK      AFR_5
+#define AFR_PA5_SPI1_SCK     AFR_5
+#define AFR_PA5_TIM2_CH1     AFR_1
+#define AFR_PA5_TIM2_ETR     AFR_1
+#define AFR_PA5_TIM8_CH1N    AFR_3
+
+//PA6
+#define AFR_PA6_DFSDM2_CKIN1    AFR_7
+#define AFR_PA6_EVENTOUT        AFR_15
+#define AFR_PA6_I2S2_MCK        AFR_6
+#define AFR_PA6_QUADSPI_BK2_IO0 AFR_10
+#define AFR_PA6_SDIO_CMD        AFR_12
+#define AFR_PA6_SPI1_MISO       AFR_5
+#define AFR_PA6_TIM13_CH1       AFR_9
+#define AFR_PA6_TIM1_BKIN       AFR_1
+#define AFR_PA6_TIM3_CH1        AFR_2
+#define AFR_PA6_TIM8_BKIN       AFR_3
+
+//PA7
+#define AFR_PA7_DFSDM2_DATIN1   AFR_7
+#define AFR_PA7_EVENTOUT        AFR_15
+#define AFR_PA7_I2S1_SD         AFR_5
+#define AFR_PA7_QUADSPI_BK2_IO1 AFR_10
+#define AFR_PA7_SPI1_MOSI       AFR_5
+#define AFR_PA7_TIM14_CH1       AFR_9
+#define AFR_PA7_TIM1_CH1N       AFR_1
+#define AFR_PA7_TIM3_CH2        AFR_2
+#define AFR_PA7_TIM8_CH1N       AFR_3
+
+//PA8
+#define AFR_PA8_CAN3_RX        AFR_11
+#define AFR_PA8_DFSDM1_CKOUT   AFR_6
+#define AFR_PA8_EVENTOUT       AFR_15
+#define AFR_PA8_I2C3_SCL       AFR_4
+#define AFR_PA8_RCC_MCO_1      AFR_0
+#define AFR_PA8_SDIO_D1        AFR_12
+#define AFR_PA8_TIM1_CH1       AFR_1
+#define AFR_PA8_UART7_RX       AFR_8
+#define AFR_PA8_USART1_CK      AFR_7
+#define AFR_PA8_USB_OTG_FS_SOF AFR_10
+
+//PA9
+#define AFR_PA9_DFSDM2_CKIN3    AFR_3
+#define AFR_PA9_EVENTOUT        AFR_15
+#define AFR_PA9_I2C3_SMBA       AFR_4
+#define AFR_PA9_I2S2_CK         AFR_5
+#define AFR_PA9_SDIO_D2         AFR_12
+#define AFR_PA9_SPI2_SCK        AFR_5
+#define AFR_PA9_TIM1_CH2        AFR_1
+#define AFR_PA9_USART1_TX       AFR_7
+#define AFR_PA9_USB_OTG_FS_VBUS AFR_10
+
+//PB0
+#define AFR_PB0_EVENTOUT  AFR_15
+#define AFR_PB0_I2S5_CK   AFR_6
+#define AFR_PB0_SPI5_SCK  AFR_6
+#define AFR_PB0_TIM1_CH2N AFR_1
+#define AFR_PB0_TIM3_CH3  AFR_2
+#define AFR_PB0_TIM8_CH2N AFR_3
+
+//PB1
+#define AFR_PB1_DFSDM1_DATIN0 AFR_8
+#define AFR_PB1_EVENTOUT      AFR_15
+#define AFR_PB1_I2S5_WS       AFR_6
+#define AFR_PB1_QUADSPI_CLK   AFR_9
+#define AFR_PB1_SPI5_NSS      AFR_6
+#define AFR_PB1_TIM1_CH3N     AFR_1
+#define AFR_PB1_TIM3_CH4      AFR_2
+#define AFR_PB1_TIM8_CH3N     AFR_3
+
+//PB10
+#define AFR_PB10_DFSDM2_CKOUT AFR_10
+#define AFR_PB10_EVENTOUT     AFR_15
+#define AFR_PB10_FMPI2C1_SCL  AFR_9
+#define AFR_PB10_I2C2_SCL     AFR_4
+#define AFR_PB10_I2S2_CK      AFR_5
+#define AFR_PB10_I2S3_MCK     AFR_6
+#define AFR_PB10_SDIO_D7      AFR_12
+#define AFR_PB10_SPI2_SCK     AFR_5
+#define AFR_PB10_TIM2_CH3     AFR_1
+#define AFR_PB10_USART3_TX    AFR_7
+
+//PB11
+#define AFR_PB11_EVENTOUT  AFR_15
+#define AFR_PB11_I2C2_SDA  AFR_4
+#define AFR_PB11_I2S_CKIN  AFR_5
+#define AFR_PB11_TIM2_CH4  AFR_1
+#define AFR_PB11_USART3_RX AFR_7
+
+//PB12
+#define AFR_PB12_CAN2_RX       AFR_9
+#define AFR_PB12_DFSDM1_DATIN1 AFR_10
+#define AFR_PB12_EVENTOUT      AFR_15
+#define AFR_PB12_FSMC_D13      AFR_12
+#define AFR_PB12_FSMC_DA13     AFR_12
+#define AFR_PB12_I2C2_SMBA     AFR_4
+#define AFR_PB12_I2S2_WS       AFR_5
+#define AFR_PB12_I2S3_CK       AFR_5
+#define AFR_PB12_I2S4_WS       AFR_6
+#define AFR_PB12_SPI2_NSS      AFR_5
+#define AFR_PB12_SPI3_SCK      AFR_7
+#define AFR_PB12_SPI4_NSS      AFR_6
+#define AFR_PB12_TIM1_BKIN     AFR_1
+#define AFR_PB12_UART5_RX      AFR_11
+#define AFR_PB12_USART3_CK     AFR_8
+
+//PB13
+#define AFR_PB13_CAN2_TX      AFR_9
+#define AFR_PB13_DFSDM1_CKIN1 AFR_10
+#define AFR_PB13_EVENTOUT     AFR_15
+#define AFR_PB13_FMPI2C1_SMBA AFR_4
+#define AFR_PB13_I2S2_CK      AFR_5
+#define AFR_PB13_I2S4_CK      AFR_6
+#define AFR_PB13_SPI2_SCK     AFR_5
+#define AFR_PB13_SPI4_SCK     AFR_6
+#define AFR_PB13_TIM1_CH1N    AFR_1
+#define AFR_PB13_UART5_TX     AFR_11
+#define AFR_PB13_USART3_CTS   AFR_8
+
+//PB14
+#define AFR_PB14_DFSDM1_DATIN2 AFR_8
+#define AFR_PB14_EVENTOUT      AFR_15
+#define AFR_PB14_FMPI2C1_SDA   AFR_4
+#define AFR_PB14_FSMC_D0       AFR_10
+#define AFR_PB14_FSMC_DA0      AFR_10
+#define AFR_PB14_I2S2_ext_SD   AFR_6
+#define AFR_PB14_SDIO_D6       AFR_12
+#define AFR_PB14_SPI2_MISO     AFR_5
+#define AFR_PB14_TIM12_CH1     AFR_9
+#define AFR_PB14_TIM1_CH2N     AFR_1
+#define AFR_PB14_TIM8_CH2N     AFR_3
+#define AFR_PB14_USART3_RTS    AFR_7
+
+//PB15
+#define AFR_PB15_DFSDM1_CKIN2 AFR_8
+#define AFR_PB15_EVENTOUT     AFR_15
+#define AFR_PB15_FMPI2C1_SCL  AFR_4
+#define AFR_PB15_I2S2_SD      AFR_5
+#define AFR_PB15_RTC_REFIN    AFR_0
+#define AFR_PB15_SDIO_CK      AFR_12
+#define AFR_PB15_SPI2_MOSI    AFR_5
+#define AFR_PB15_TIM12_CH2    AFR_9
+#define AFR_PB15_TIM1_CH3N    AFR_1
+#define AFR_PB15_TIM8_CH3N    AFR_3
+
+//PB2
+#define AFR_PB2_DFSDM1_CKIN0 AFR_6
+#define AFR_PB2_EVENTOUT     AFR_15
+#define AFR_PB2_LPTIM1_OUT   AFR_1
+#define AFR_PB2_QUADSPI_CLK  AFR_9
+
+//PB3
+#define AFR_PB3_CAN3_RX      AFR_11
+#define AFR_PB3_EVENTOUT     AFR_15
+#define AFR_PB3_FMPI2C1_SDA  AFR_4
+#define AFR_PB3_I2C2_SDA     AFR_9
+#define AFR_PB3_I2S1_CK      AFR_5
+#define AFR_PB3_I2S3_CK      AFR_6
+#define AFR_PB3_SAI1_SD_A    AFR_10
+#define AFR_PB3_SPI1_SCK     AFR_5
+#define AFR_PB3_SPI3_SCK     AFR_6
+#define AFR_PB3_SYS_JTDO_SWO AFR_0
+#define AFR_PB3_TIM2_CH2     AFR_1
+#define AFR_PB3_UART7_RX     AFR_8
+#define AFR_PB3_USART1_RX    AFR_7
+
+//PB4
+#define AFR_PB4_CAN3_TX     AFR_11
+#define AFR_PB4_EVENTOUT    AFR_15
+#define AFR_PB4_I2C3_SDA    AFR_9
+#define AFR_PB4_I2S3_ext_SD AFR_5
+#define AFR_PB4_SAI1_SCK_A  AFR_10
+#define AFR_PB4_SDIO_D0     AFR_12
+#define AFR_PB4_SPI1_MISO   AFR_5
+#define AFR_PB4_SPI3_MISO   AFR_6
+#define AFR_PB4_SYS_JTRST   AFR_0
+#define AFR_PB4_TIM3_CH1    AFR_2
+#define AFR_PB4_UART7_TX    AFR_8
+
+//PB5
+#define AFR_PB5_CAN2_RX    AFR_9
+#define AFR_PB5_EVENTOUT   AFR_15
+#define AFR_PB5_I2C1_SMBA  AFR_4
+#define AFR_PB5_I2S1_SD    AFR_5
+#define AFR_PB5_I2S3_SD    AFR_6
+#define AFR_PB5_LPTIM1_IN1 AFR_1
+#define AFR_PB5_SAI1_FS_A  AFR_10
+#define AFR_PB5_SDIO_D3    AFR_12
+#define AFR_PB5_SPI1_MOSI  AFR_5
+#define AFR_PB5_SPI3_MOSI  AFR_6
+#define AFR_PB5_TIM3_CH2   AFR_2
+#define AFR_PB5_UART5_RX   AFR_11
+
+//PB6
+#define AFR_PB6_CAN2_TX         AFR_9
+#define AFR_PB6_DFSDM2_CKIN7    AFR_6
+#define AFR_PB6_EVENTOUT        AFR_15
+#define AFR_PB6_I2C1_SCL        AFR_4
+#define AFR_PB6_LPTIM1_ETR      AFR_1
+#define AFR_PB6_QUADSPI_BK1_NCS AFR_10
+#define AFR_PB6_SDIO_D0         AFR_12
+#define AFR_PB6_TIM4_CH1        AFR_2
+#define AFR_PB6_UART5_TX        AFR_11
+#define AFR_PB6_USART1_TX       AFR_7
+
+//PB7
+#define AFR_PB7_DFSDM2_DATIN7 AFR_6
+#define AFR_PB7_EVENTOUT      AFR_15
+#define AFR_PB7_FSMC_NL       AFR_12
+#define AFR_PB7_I2C1_SDA      AFR_4
+#define AFR_PB7_LPTIM1_IN2    AFR_1
+#define AFR_PB7_TIM4_CH2      AFR_2
+#define AFR_PB7_USART1_RX     AFR_7
+
+//PB8
+#define AFR_PB8_CAN1_RX      AFR_8
+#define AFR_PB8_DFSDM2_CKIN1 AFR_7
+#define AFR_PB8_EVENTOUT     AFR_15
+#define AFR_PB8_I2C1_SCL     AFR_4
+#define AFR_PB8_I2C3_SDA     AFR_9
+#define AFR_PB8_I2S5_SD      AFR_6
+#define AFR_PB8_LPTIM1_OUT   AFR_1
+#define AFR_PB8_SDIO_D4      AFR_12
+#define AFR_PB8_SPI5_MOSI    AFR_6
+#define AFR_PB8_TIM10_CH1    AFR_3
+#define AFR_PB8_TIM4_CH3     AFR_2
+#define AFR_PB8_UART5_RX     AFR_11
+
+//PB9
+#define AFR_PB9_CAN1_TX       AFR_8
+#define AFR_PB9_DFSDM2_DATIN1 AFR_6
+#define AFR_PB9_EVENTOUT      AFR_15
+#define AFR_PB9_I2C1_SDA      AFR_4
+#define AFR_PB9_I2C2_SDA      AFR_9
+#define AFR_PB9_I2S2_WS       AFR_5
+#define AFR_PB9_SDIO_D5       AFR_12
+#define AFR_PB9_SPI2_NSS      AFR_5
+#define AFR_PB9_TIM11_CH1     AFR_3
+#define AFR_PB9_TIM4_CH4      AFR_2
+#define AFR_PB9_UART5_TX      AFR_11
+
+//PC0
+#define AFR_PC0_DFSDM2_CKIN4 AFR_3
+#define AFR_PC0_EVENTOUT     AFR_15
+#define AFR_PC0_LPTIM1_IN1   AFR_1
+#define AFR_PC0_SAI1_MCLK_B  AFR_7
+
+//PC1
+#define AFR_PC1_DFSDM2_DATIN4 AFR_3
+#define AFR_PC1_EVENTOUT      AFR_15
+#define AFR_PC1_LPTIM1_OUT    AFR_1
+#define AFR_PC1_SAI1_SD_B     AFR_7
+
+//PC10
+#define AFR_PC10_DFSDM2_CKIN5    AFR_3
+#define AFR_PC10_EVENTOUT        AFR_15
+#define AFR_PC10_I2S3_CK         AFR_6
+#define AFR_PC10_QUADSPI_BK1_IO1 AFR_9
+#define AFR_PC10_SDIO_D2         AFR_12
+#define AFR_PC10_SPI3_SCK        AFR_6
+#define AFR_PC10_USART3_TX       AFR_7
+
+//PC11
+#define AFR_PC11_DFSDM2_DATIN5   AFR_3
+#define AFR_PC11_EVENTOUT        AFR_15
+#define AFR_PC11_FSMC_D2         AFR_10
+#define AFR_PC11_FSMC_DA2        AFR_10
+#define AFR_PC11_I2S3_ext_SD     AFR_5
+#define AFR_PC11_QUADSPI_BK2_NCS AFR_9
+#define AFR_PC11_SDIO_D3         AFR_12
+#define AFR_PC11_SPI3_MISO       AFR_6
+#define AFR_PC11_UART4_RX        AFR_8
+#define AFR_PC11_USART3_RX       AFR_7
+
+//PC12
+#define AFR_PC12_EVENTOUT  AFR_15
+#define AFR_PC12_FSMC_D3   AFR_10
+#define AFR_PC12_FSMC_DA3  AFR_10
+#define AFR_PC12_I2S3_SD   AFR_6
+#define AFR_PC12_SDIO_CK   AFR_12
+#define AFR_PC12_SPI3_MOSI AFR_6
+#define AFR_PC12_UART5_TX  AFR_8
+#define AFR_PC12_USART3_CK AFR_7
+
+//PC13
+#define AFR_PC13_EVENTOUT AFR_15
+
+//PC14
+#define AFR_PC14_EVENTOUT AFR_15
+
+//PC15
+#define AFR_PC15_EVENTOUT AFR_15
+
+//PC2
+#define AFR_PC2_DFSDM1_CKOUT  AFR_8
+#define AFR_PC2_DFSDM2_DATIN7 AFR_3
+#define AFR_PC2_EVENTOUT      AFR_15
+#define AFR_PC2_FSMC_NWE      AFR_12
+#define AFR_PC2_I2S2_ext_SD   AFR_6
+#define AFR_PC2_LPTIM1_IN2    AFR_1
+#define AFR_PC2_SAI1_SCK_B    AFR_7
+#define AFR_PC2_SPI2_MISO     AFR_5
+
+//PC3
+#define AFR_PC3_DFSDM2_CKIN7 AFR_3
+#define AFR_PC3_EVENTOUT     AFR_15
+#define AFR_PC3_FSMC_A0      AFR_12
+#define AFR_PC3_I2S2_SD      AFR_5
+#define AFR_PC3_LPTIM1_ETR   AFR_1
+#define AFR_PC3_SAI1_FS_B    AFR_7
+#define AFR_PC3_SPI2_MOSI    AFR_5
+
+//PC4
+#define AFR_PC4_DFSDM2_CKIN2    AFR_3
+#define AFR_PC4_EVENTOUT        AFR_15
+#define AFR_PC4_FSMC_NE4        AFR_12
+#define AFR_PC4_I2S1_MCK        AFR_5
+#define AFR_PC4_QUADSPI_BK2_IO2 AFR_10
+
+//PC5
+#define AFR_PC5_DFSDM2_DATIN2   AFR_3
+#define AFR_PC5_EVENTOUT        AFR_15
+#define AFR_PC5_FMPI2C1_SMBA    AFR_4
+#define AFR_PC5_FSMC_NOE        AFR_12
+#define AFR_PC5_QUADSPI_BK2_IO3 AFR_10
+#define AFR_PC5_USART3_RX       AFR_7
+
+//PC6
+#define AFR_PC6_DFSDM1_CKIN3  AFR_6
+#define AFR_PC6_DFSDM2_DATIN6 AFR_7
+#define AFR_PC6_EVENTOUT      AFR_15
+#define AFR_PC6_FMPI2C1_SCL   AFR_4
+#define AFR_PC6_FSMC_D1       AFR_10
+#define AFR_PC6_FSMC_DA1      AFR_10
+#define AFR_PC6_I2S2_MCK      AFR_5
+#define AFR_PC6_SDIO_D6       AFR_12
+#define AFR_PC6_TIM3_CH1      AFR_2
+#define AFR_PC6_TIM8_CH1      AFR_3
+#define AFR_PC6_USART6_TX     AFR_8
+
+//PC7
+#define AFR_PC7_DFSDM1_DATIN3 AFR_10
+#define AFR_PC7_DFSDM2_CKIN6  AFR_7
+#define AFR_PC7_EVENTOUT      AFR_15
+#define AFR_PC7_FMPI2C1_SDA   AFR_4
+#define AFR_PC7_I2S2_CK       AFR_5
+#define AFR_PC7_I2S3_MCK      AFR_6
+#define AFR_PC7_SDIO_D7       AFR_12
+#define AFR_PC7_SPI2_SCK      AFR_5
+#define AFR_PC7_TIM3_CH2      AFR_2
+#define AFR_PC7_TIM8_CH2      AFR_3
+#define AFR_PC7_USART6_RX     AFR_8
+
+//PC8
+#define AFR_PC8_DFSDM2_CKIN3    AFR_7
+#define AFR_PC8_EVENTOUT        AFR_15
+#define AFR_PC8_QUADSPI_BK1_IO2 AFR_9
+#define AFR_PC8_SDIO_D0         AFR_12
+#define AFR_PC8_TIM3_CH3        AFR_2
+#define AFR_PC8_TIM8_CH3        AFR_3
+#define AFR_PC8_USART6_CK       AFR_8
+
+//PC9
+#define AFR_PC9_DFSDM2_DATIN3   AFR_7
+#define AFR_PC9_EVENTOUT        AFR_15
+#define AFR_PC9_I2C3_SDA        AFR_4
+#define AFR_PC9_I2S_CKIN        AFR_5
+#define AFR_PC9_QUADSPI_BK1_IO0 AFR_9
+#define AFR_PC9_RCC_MCO_2       AFR_0
+#define AFR_PC9_SDIO_D1         AFR_12
+#define AFR_PC9_TIM3_CH4        AFR_2
+#define AFR_PC9_TIM8_CH4        AFR_3
+
+//PD0
+#define AFR_PD0_CAN1_RX      AFR_9
+#define AFR_PD0_DFSDM2_CKIN6 AFR_3
+#define AFR_PD0_EVENTOUT     AFR_15
+#define AFR_PD0_FSMC_D2      AFR_12
+#define AFR_PD0_FSMC_DA2     AFR_12
+#define AFR_PD0_UART4_RX     AFR_11
+
+//PD1
+#define AFR_PD1_CAN1_TX       AFR_9
+#define AFR_PD1_DFSDM2_DATIN6 AFR_3
+#define AFR_PD1_EVENTOUT      AFR_15
+#define AFR_PD1_FSMC_D3       AFR_12
+#define AFR_PD1_FSMC_DA3      AFR_12
+#define AFR_PD1_UART4_TX      AFR_11
+
+//PD10
+#define AFR_PD10_EVENTOUT  AFR_15
+#define AFR_PD10_FSMC_D15  AFR_12
+#define AFR_PD10_FSMC_DA15 AFR_12
+#define AFR_PD10_UART4_TX  AFR_8
+#define AFR_PD10_USART3_CK AFR_7
+
+//PD11
+#define AFR_PD11_DFSDM2_DATIN2   AFR_3
+#define AFR_PD11_EVENTOUT        AFR_15
+#define AFR_PD11_FMPI2C1_SMBA    AFR_4
+#define AFR_PD11_FSMC_A16        AFR_12
+#define AFR_PD11_QUADSPI_BK1_IO0 AFR_9
+#define AFR_PD11_USART3_CTS      AFR_7
+
+//PD12
+#define AFR_PD12_DFSDM2_CKIN2    AFR_3
+#define AFR_PD12_EVENTOUT        AFR_15
+#define AFR_PD12_FMPI2C1_SCL     AFR_4
+#define AFR_PD12_FSMC_A17        AFR_12
+#define AFR_PD12_QUADSPI_BK1_IO1 AFR_9
+#define AFR_PD12_TIM4_CH1        AFR_2
+#define AFR_PD12_USART3_RTS      AFR_7
+
+//PD13
+#define AFR_PD13_EVENTOUT        AFR_15
+#define AFR_PD13_FMPI2C1_SDA     AFR_4
+#define AFR_PD13_FSMC_A18        AFR_12
+#define AFR_PD13_QUADSPI_BK1_IO3 AFR_9
+#define AFR_PD13_TIM4_CH2        AFR_2
+
+//PD14
+#define AFR_PD14_DFSDM2_CKIN0 AFR_10
+#define AFR_PD14_EVENTOUT     AFR_15
+#define AFR_PD14_FMPI2C1_SCL  AFR_4
+#define AFR_PD14_FSMC_D0      AFR_12
+#define AFR_PD14_FSMC_DA0     AFR_12
+#define AFR_PD14_TIM4_CH3     AFR_2
+#define AFR_PD14_UART9_RX     AFR_11
+
+//PD15
+#define AFR_PD15_DFSDM2_DATIN0 AFR_10
+#define AFR_PD15_EVENTOUT      AFR_15
+#define AFR_PD15_FMPI2C1_SDA   AFR_4
+#define AFR_PD15_FSMC_D1       AFR_12
+#define AFR_PD15_FSMC_DA1      AFR_12
+#define AFR_PD15_TIM4_CH4      AFR_2
+#define AFR_PD15_UART9_TX      AFR_11
+
+//PD2
+#define AFR_PD2_DFSDM2_CKOUT AFR_3
+#define AFR_PD2_EVENTOUT     AFR_15
+#define AFR_PD2_FSMC_NWE     AFR_10
+#define AFR_PD2_SDIO_CMD     AFR_12
+#define AFR_PD2_TIM3_ETR     AFR_2
+#define AFR_PD2_UART5_RX     AFR_8
+
+//PD3
+#define AFR_PD3_DFSDM1_DATIN0 AFR_6
+#define AFR_PD3_EVENTOUT      AFR_15
+#define AFR_PD3_FSMC_CLK      AFR_12
+#define AFR_PD3_I2S2_CK       AFR_5
+#define AFR_PD3_QUADSPI_CLK   AFR_9
+#define AFR_PD3_SPI2_SCK      AFR_5
+#define AFR_PD3_SYS_TRACED1   AFR_0
+#define AFR_PD3_USART2_CTS    AFR_7
+
+//PD4
+#define AFR_PD4_DFSDM1_CKIN0 AFR_6
+#define AFR_PD4_EVENTOUT     AFR_15
+#define AFR_PD4_FSMC_NOE     AFR_12
+#define AFR_PD4_USART2_RTS   AFR_7
+
+//PD5
+#define AFR_PD5_DFSDM2_CKOUT AFR_3
+#define AFR_PD5_EVENTOUT     AFR_15
+#define AFR_PD5_FSMC_NWE     AFR_12
+#define AFR_PD5_USART2_TX    AFR_7
+
+//PD6
+#define AFR_PD6_DFSDM1_DATIN1 AFR_6
+#define AFR_PD6_EVENTOUT      AFR_15
+#define AFR_PD6_FSMC_NWAIT    AFR_12
+#define AFR_PD6_I2S3_SD       AFR_5
+#define AFR_PD6_SPI3_MOSI     AFR_5
+#define AFR_PD6_USART2_RX     AFR_7
+
+//PD7
+#define AFR_PD7_DFSDM1_CKIN1 AFR_6
+#define AFR_PD7_EVENTOUT     AFR_15
+#define AFR_PD7_FSMC_NE1     AFR_12
+#define AFR_PD7_USART2_CK    AFR_7
+
+//PD8
+#define AFR_PD8_EVENTOUT  AFR_15
+#define AFR_PD8_FSMC_D13  AFR_12
+#define AFR_PD8_FSMC_DA13 AFR_12
+#define AFR_PD8_USART3_TX AFR_7
+
+//PD9
+#define AFR_PD9_EVENTOUT  AFR_15
+#define AFR_PD9_FSMC_D14  AFR_12
+#define AFR_PD9_FSMC_DA14 AFR_12
+#define AFR_PD9_USART3_RX AFR_7
+
+//PE0
+#define AFR_PE0_DFSDM2_CKIN4 AFR_3
+#define AFR_PE0_EVENTOUT     AFR_15
+#define AFR_PE0_FSMC_NBL0    AFR_12
+#define AFR_PE0_TIM4_ETR     AFR_2
+#define AFR_PE0_UART8_RX     AFR_8
+
+//PE1
+#define AFR_PE1_DFSDM2_DATIN4 AFR_3
+#define AFR_PE1_EVENTOUT      AFR_15
+#define AFR_PE1_FSMC_NBL1     AFR_12
+#define AFR_PE1_UART8_TX      AFR_8
+
+//PE10
+#define AFR_PE10_DFSDM2_DATIN0   AFR_3
+#define AFR_PE10_EVENTOUT        AFR_15
+#define AFR_PE10_FSMC_D7         AFR_12
+#define AFR_PE10_FSMC_DA7        AFR_12
+#define AFR_PE10_QUADSPI_BK2_IO3 AFR_10
+#define AFR_PE10_TIM1_CH2N       AFR_1
+
+//PE11
+#define AFR_PE11_DFSDM2_CKIN0 AFR_3
+#define AFR_PE11_EVENTOUT     AFR_15
+#define AFR_PE11_FSMC_D8      AFR_12
+#define AFR_PE11_FSMC_DA8     AFR_12
+#define AFR_PE11_I2S4_WS      AFR_5
+#define AFR_PE11_I2S5_WS      AFR_6
+#define AFR_PE11_SPI4_NSS     AFR_5
+#define AFR_PE11_SPI5_NSS     AFR_6
+#define AFR_PE11_TIM1_CH2     AFR_1
+
+//PE12
+#define AFR_PE12_DFSDM2_DATIN7 AFR_3
+#define AFR_PE12_EVENTOUT      AFR_15
+#define AFR_PE12_FSMC_D9       AFR_12
+#define AFR_PE12_FSMC_DA9      AFR_12
+#define AFR_PE12_I2S4_CK       AFR_5
+#define AFR_PE12_I2S5_CK       AFR_6
+#define AFR_PE12_SPI4_SCK      AFR_5
+#define AFR_PE12_SPI5_SCK      AFR_6
+#define AFR_PE12_TIM1_CH3N     AFR_1
+
+//PE13
+#define AFR_PE13_DFSDM2_CKIN7 AFR_3
+#define AFR_PE13_EVENTOUT     AFR_15
+#define AFR_PE13_FSMC_D10     AFR_12
+#define AFR_PE13_FSMC_DA10    AFR_12
+#define AFR_PE13_SPI4_MISO    AFR_5
+#define AFR_PE13_SPI5_MISO    AFR_6
+#define AFR_PE13_TIM1_CH3     AFR_1
+
+//PE14
+#define AFR_PE14_DFSDM2_DATIN1 AFR_10
+#define AFR_PE14_EVENTOUT      AFR_15
+#define AFR_PE14_FSMC_D11      AFR_12
+#define AFR_PE14_FSMC_DA11     AFR_12
+#define AFR_PE14_I2S4_SD       AFR_5
+#define AFR_PE14_I2S5_SD       AFR_6
+#define AFR_PE14_SPI4_MOSI     AFR_5
+#define AFR_PE14_SPI5_MOSI     AFR_6
+#define AFR_PE14_TIM1_CH4      AFR_1
+
+//PE15
+#define AFR_PE15_DFSDM2_CKIN1 AFR_10
+#define AFR_PE15_EVENTOUT     AFR_15
+#define AFR_PE15_FSMC_D12     AFR_12
+#define AFR_PE15_FSMC_DA12    AFR_12
+#define AFR_PE15_TIM1_BKIN    AFR_1
+
+//PE2
+#define AFR_PE2_EVENTOUT        AFR_15
+#define AFR_PE2_FSMC_A23        AFR_12
+#define AFR_PE2_I2S4_CK         AFR_5
+#define AFR_PE2_I2S5_CK         AFR_6
+#define AFR_PE2_QUADSPI_BK1_IO2 AFR_9
+#define AFR_PE2_SAI1_MCLK_A     AFR_7
+#define AFR_PE2_SPI4_SCK        AFR_5
+#define AFR_PE2_SPI5_SCK        AFR_6
+#define AFR_PE2_SYS_TRACECLK    AFR_0
+#define AFR_PE2_UART10_RX       AFR_11
+
+//PE3
+#define AFR_PE3_EVENTOUT    AFR_15
+#define AFR_PE3_FSMC_A19    AFR_12
+#define AFR_PE3_SAI1_SD_B   AFR_7
+#define AFR_PE3_SYS_TRACED0 AFR_0
+#define AFR_PE3_UART10_TX   AFR_11
+
+//PE4
+#define AFR_PE4_DFSDM1_DATIN3 AFR_8
+#define AFR_PE4_EVENTOUT      AFR_15
+#define AFR_PE4_FSMC_A20      AFR_12
+#define AFR_PE4_I2S4_WS       AFR_5
+#define AFR_PE4_I2S5_WS       AFR_6
+#define AFR_PE4_SAI1_SD_A     AFR_7
+#define AFR_PE4_SPI4_NSS      AFR_5
+#define AFR_PE4_SPI5_NSS      AFR_6
+#define AFR_PE4_SYS_TRACED1   AFR_0
+
+//PE5
+#define AFR_PE5_DFSDM1_CKIN3 AFR_8
+#define AFR_PE5_EVENTOUT     AFR_15
+#define AFR_PE5_FSMC_A21     AFR_12
+#define AFR_PE5_SAI1_SCK_A   AFR_7
+#define AFR_PE5_SPI4_MISO    AFR_5
+#define AFR_PE5_SPI5_MISO    AFR_6
+#define AFR_PE5_SYS_TRACED2  AFR_0
+#define AFR_PE5_TIM9_CH1     AFR_3
+
+//PE6
+#define AFR_PE6_EVENTOUT    AFR_15
+#define AFR_PE6_FSMC_A22    AFR_12
+#define AFR_PE6_I2S4_SD     AFR_5
+#define AFR_PE6_I2S5_SD     AFR_6
+#define AFR_PE6_SAI1_FS_A   AFR_7
+#define AFR_PE6_SPI4_MOSI   AFR_5
+#define AFR_PE6_SPI5_MOSI   AFR_6
+#define AFR_PE6_SYS_TRACED3 AFR_0
+#define AFR_PE6_TIM9_CH2    AFR_3
+
+//PE7
+#define AFR_PE7_DFSDM1_DATIN2   AFR_6
+#define AFR_PE7_EVENTOUT        AFR_15
+#define AFR_PE7_FSMC_D4         AFR_12
+#define AFR_PE7_FSMC_DA4        AFR_12
+#define AFR_PE7_QUADSPI_BK2_IO0 AFR_10
+#define AFR_PE7_TIM1_ETR        AFR_1
+#define AFR_PE7_UART7_RX        AFR_8
+
+//PE8
+#define AFR_PE8_DFSDM1_CKIN2    AFR_6
+#define AFR_PE8_EVENTOUT        AFR_15
+#define AFR_PE8_FSMC_D5         AFR_12
+#define AFR_PE8_FSMC_DA5        AFR_12
+#define AFR_PE8_QUADSPI_BK2_IO1 AFR_10
+#define AFR_PE8_TIM1_CH1N       AFR_1
+#define AFR_PE8_UART7_TX        AFR_8
+
+//PE9
+#define AFR_PE9_DFSDM1_CKOUT    AFR_6
+#define AFR_PE9_EVENTOUT        AFR_15
+#define AFR_PE9_FSMC_D6         AFR_12
+#define AFR_PE9_FSMC_DA6        AFR_12
+#define AFR_PE9_QUADSPI_BK2_IO2 AFR_10
+#define AFR_PE9_TIM1_CH1        AFR_1
+
+//PF0
+#define AFR_PF0_EVENTOUT AFR_15
+#define AFR_PF0_FSMC_A0  AFR_12
+#define AFR_PF0_I2C2_SDA AFR_4
+
+//PF1
+#define AFR_PF1_EVENTOUT AFR_15
+#define AFR_PF1_FSMC_A1  AFR_12
+#define AFR_PF1_I2C2_SCL AFR_4
+
+//PF10
+#define AFR_PF10_EVENTOUT AFR_15
+#define AFR_PF10_TIM1_ETR AFR_1
+#define AFR_PF10_TIM5_CH4 AFR_2
+
+//PF11
+#define AFR_PF11_EVENTOUT AFR_15
+#define AFR_PF11_TIM8_ETR AFR_3
+
+//PF12
+#define AFR_PF12_EVENTOUT  AFR_15
+#define AFR_PF12_FSMC_A6   AFR_12
+#define AFR_PF12_TIM8_BKIN AFR_3
+
+//PF13
+#define AFR_PF13_EVENTOUT     AFR_15
+#define AFR_PF13_FMPI2C1_SMBA AFR_4
+#define AFR_PF13_FSMC_A7      AFR_12
+
+//PF14
+#define AFR_PF14_EVENTOUT    AFR_15
+#define AFR_PF14_FMPI2C1_SCL AFR_4
+#define AFR_PF14_FSMC_A8     AFR_12
+
+//PF15
+#define AFR_PF15_EVENTOUT    AFR_15
+#define AFR_PF15_FMPI2C1_SDA AFR_4
+#define AFR_PF15_FSMC_A9     AFR_12
+
+//PF2
+#define AFR_PF2_EVENTOUT  AFR_15
+#define AFR_PF2_FSMC_A2   AFR_12
+#define AFR_PF2_I2C2_SMBA AFR_4
+
+//PF3
+#define AFR_PF3_EVENTOUT AFR_15
+#define AFR_PF3_FSMC_A3  AFR_12
+#define AFR_PF3_TIM5_CH1 AFR_2
+
+//PF4
+#define AFR_PF4_EVENTOUT AFR_15
+#define AFR_PF4_FSMC_A4  AFR_12
+#define AFR_PF4_TIM5_CH2 AFR_2
+
+//PF5
+#define AFR_PF5_EVENTOUT AFR_15
+#define AFR_PF5_FSMC_A5  AFR_12
+#define AFR_PF5_TIM5_CH3 AFR_2
+
+//PF6
+#define AFR_PF6_EVENTOUT        AFR_15
+#define AFR_PF6_QUADSPI_BK1_IO3 AFR_9
+#define AFR_PF6_SAI1_SD_B       AFR_7
+#define AFR_PF6_SYS_TRACED0     AFR_0
+#define AFR_PF6_TIM10_CH1       AFR_3
+#define AFR_PF6_UART7_RX        AFR_8
+
+//PF7
+#define AFR_PF7_EVENTOUT        AFR_15
+#define AFR_PF7_QUADSPI_BK1_IO2 AFR_9
+#define AFR_PF7_SAI1_MCLK_B     AFR_7
+#define AFR_PF7_SYS_TRACED1     AFR_0
+#define AFR_PF7_TIM11_CH1       AFR_3
+#define AFR_PF7_UART7_TX        AFR_8
+
+//PF8
+#define AFR_PF8_EVENTOUT        AFR_15
+#define AFR_PF8_QUADSPI_BK1_IO0 AFR_10
+#define AFR_PF8_SAI1_SCK_B      AFR_7
+#define AFR_PF8_TIM13_CH1       AFR_9
+#define AFR_PF8_UART8_RX        AFR_8
+
+//PF9
+#define AFR_PF9_EVENTOUT        AFR_15
+#define AFR_PF9_QUADSPI_BK1_IO1 AFR_10
+#define AFR_PF9_SAI1_FS_B       AFR_7
+#define AFR_PF9_TIM14_CH1       AFR_9
+#define AFR_PF9_UART8_TX        AFR_8
+
+//PG0
+#define AFR_PG0_CAN1_RX  AFR_9
+#define AFR_PG0_EVENTOUT AFR_15
+#define AFR_PG0_FSMC_A10 AFR_12
+#define AFR_PG0_UART9_RX AFR_11
+
+//PG1
+#define AFR_PG1_CAN1_TX  AFR_9
+#define AFR_PG1_EVENTOUT AFR_15
+#define AFR_PG1_FSMC_A11 AFR_12
+#define AFR_PG1_UART9_TX AFR_11
+
+//PG10
+#define AFR_PG10_EVENTOUT AFR_15
+#define AFR_PG10_FSMC_NE3 AFR_12
+
+//PG11
+#define AFR_PG11_CAN2_RX   AFR_9
+#define AFR_PG11_EVENTOUT  AFR_15
+#define AFR_PG11_UART10_RX AFR_11
+
+//PG12
+#define AFR_PG12_CAN2_TX    AFR_9
+#define AFR_PG12_EVENTOUT   AFR_15
+#define AFR_PG12_FSMC_NE4   AFR_12
+#define AFR_PG12_UART10_TX  AFR_11
+#define AFR_PG12_USART6_RTS AFR_8
+
+//PG13
+#define AFR_PG13_EVENTOUT    AFR_15
+#define AFR_PG13_FSMC_A24    AFR_12
+#define AFR_PG13_SYS_TRACED2 AFR_0
+#define AFR_PG13_USART6_CTS  AFR_8
+
+//PG14
+#define AFR_PG14_EVENTOUT        AFR_15
+#define AFR_PG14_FSMC_A25        AFR_12
+#define AFR_PG14_QUADSPI_BK2_IO3 AFR_9
+#define AFR_PG14_SYS_TRACED3     AFR_0
+#define AFR_PG14_USART6_TX       AFR_8
+
+//PG15
+#define AFR_PG15_EVENTOUT   AFR_15
+#define AFR_PG15_USART6_CTS AFR_8
+
+//PG2
+#define AFR_PG2_EVENTOUT AFR_15
+#define AFR_PG2_FSMC_A12 AFR_12
+
+//PG3
+#define AFR_PG3_EVENTOUT AFR_15
+#define AFR_PG3_FSMC_A13 AFR_12
+
+//PG4
+#define AFR_PG4_EVENTOUT AFR_15
+#define AFR_PG4_FSMC_A14 AFR_12
+
+//PG5
+#define AFR_PG5_EVENTOUT AFR_15
+#define AFR_PG5_FSMC_A15 AFR_12
+
+//PG6
+#define AFR_PG6_EVENTOUT        AFR_15
+#define AFR_PG6_QUADSPI_BK1_NCS AFR_10
+
+//PG7
+#define AFR_PG7_EVENTOUT  AFR_15
+#define AFR_PG7_USART6_CK AFR_8
+
+//PG8
+#define AFR_PG8_EVENTOUT   AFR_15
+#define AFR_PG8_USART6_RTS AFR_8
+
+//PG9
+#define AFR_PG9_EVENTOUT        AFR_15
+#define AFR_PG9_FSMC_NE2        AFR_12
+#define AFR_PG9_QUADSPI_BK2_IO2 AFR_9
+#define AFR_PG9_USART6_RX       AFR_8
+
+//PH0 
+#define AFR_PH0 _EVENTOUT AFR_15
+
+//PH1 
+#define AFR_PH1 _EVENTOUT AFR_15
+
+#endif
