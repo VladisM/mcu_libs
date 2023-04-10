@@ -10,6 +10,7 @@ set(driver_mcu_inc
 set(driver_mcu_src
     ${CMAKE_CURRENT_SOURCE_DIR}/src/clock_ll.c
     ${CMAKE_CURRENT_SOURCE_DIR}/src/clock.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/fmc.c
     ${CMAKE_CURRENT_SOURCE_DIR}/src/gpio.c
     ${CMAKE_CURRENT_SOURCE_DIR}/src/i2c.c
     ${CMAKE_CURRENT_SOURCE_DIR}/src/mcu_flash.c

@@ -25,6 +25,12 @@ void clock_enable_peripheral_clock(void *peripheral){
         case (uint32_t)I2C3:    RCC->APB1ENR |= RCC_APB1ENR_I2C3EN;   break;
         case (uint32_t)USART1:  RCC->APB2ENR |= RCC_APB2ENR_USART1EN; break;
         case (uint32_t)USART6:  RCC->APB2ENR |= RCC_APB2ENR_USART6EN; break;
+        case (uint32_t)FMC_Bank1:
+        case (uint32_t)FMC_Bank1E:
+        case (uint32_t)FMC_Bank3:
+        case (uint32_t)FMC_Bank5_6:
+            RCC->AHB3ENR |= RCC_AHB3ENR_FMCEN;
+            break;
         default:
             DRIVER_MCU_DEBUG_ERROR("Trying to enable clock for unknown peripheral %u", (uint32_t)peripheral);
             break;
@@ -51,6 +57,12 @@ void clock_disable_peripheral_clock(void *peripheral){
         case (uint32_t)I2C3:    RCC->APB1ENR &= ~(RCC_APB1ENR_I2C3EN);   break;
         case (uint32_t)USART1:  RCC->APB2ENR &= ~(RCC_APB2ENR_USART1EN); break;
         case (uint32_t)USART6:  RCC->APB2ENR &= ~(RCC_APB2ENR_USART6EN); break;
+        case (uint32_t)FMC_Bank1:
+        case (uint32_t)FMC_Bank1E:
+        case (uint32_t)FMC_Bank3:
+        case (uint32_t)FMC_Bank5_6:
+            RCC->AHB3ENR &= ~(RCC_AHB3ENR_FMCEN);
+            break;
         default:
             DRIVER_MCU_DEBUG_ERROR("Trying to enable clock for unknown peripheral %u", (uint32_t)peripheral);
             break;
@@ -68,6 +80,10 @@ uint32_t clock_get_peripheral_clock(void *peripheral){
         case (uint32_t)GPIOG:
         case (uint32_t)GPIOH:
         case (uint32_t)QUADSPI:
+        case (uint32_t)FMC_Bank1:
+        case (uint32_t)FMC_Bank1E:
+        case (uint32_t)FMC_Bank3:
+        case (uint32_t)FMC_Bank5_6:
             return clock_ll_hclk_get();
 
         case (uint32_t)USART2:

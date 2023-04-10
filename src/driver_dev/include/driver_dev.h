@@ -5,5 +5,6 @@
 #include "../src/eeprom.h"
 #include "../src/flash.h"
 #include "../src/led.h"
+#include "../src/sdram.h"
 
 #endif
