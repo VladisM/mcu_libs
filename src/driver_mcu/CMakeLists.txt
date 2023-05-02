@@ -20,5 +20,5 @@ set(driver_mcu_src
 
 add_library(${target} ${driver_mcu_src})
 target_include_directories(${target} PUBLIC ${driver_mcu_inc})
-target_link_libraries(${target} PUBLIC cmsis)
+target_link_libraries(${target} PUBLIC cmsis utillib-core)
 target_link_libraries(${target} PRIVATE debugLib)
