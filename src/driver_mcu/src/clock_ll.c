@@ -322,3 +322,8 @@ void clock_ll_sdio_set_src(sdio_clk_src_t src){
     RCC->DCKCFGR2 &= ~(RCC_DCKCFGR2_SDIOSEL_Msk);
     RCC->DCKCFGR2 |= macro;
 }
+
+void clock_ll_hse_en(void){
+    RCC->CR |= RCC_CR_HSEON;
+    while((RCC->CR & RCC_CR_HSERDY) != RCC_CR_HSERDY) __NOP();
+}

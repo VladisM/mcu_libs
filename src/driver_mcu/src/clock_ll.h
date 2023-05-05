@@ -56,5 +56,6 @@ void clock_ll_pllsai_en(void);
 void clock_ll_plli2s_set_conf(uint32_t r, uint32_t q, uint32_t p, uint32_t n, uint32_t m);
 void clock_ll_plli2s_en(void);
 void clock_ll_sdio_set_src(sdio_clk_src_t src);
+void clock_ll_hse_en(void);
 
 #endif
