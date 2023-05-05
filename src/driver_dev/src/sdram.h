@@ -15,9 +15,7 @@ typedef struct{
     struct {
         fmc_driver_t *fmc;
     } bus;
-    #ifndef NDEBUG
     const char *sdram_name;
-    #endif
 } sdram_driver_t;
 
 
@@ -43,11 +41,6 @@ void sdram_driver_write_u8(sdram_driver_t *sdram, uint32_t address, uint32_t len
 void sdram_driver_write_u16(sdram_driver_t *sdram, uint32_t address, uint32_t len, uint16_t *data);
 void sdram_driver_write_u32(sdram_driver_t *sdram, uint32_t address, uint32_t len, uint32_t *data);
 
-#ifndef NDEBUG
-#define SDRAM_DRIVER_SET_NAME(sdram, sdram_name) sdram_driver_set_name((sdram), (sdram_name))
 void sdram_driver_set_name(sdram_driver_t *sdram, const char *sdram_name);
-#else
-#define SDRAM_DRIVER_SET_NAME(sdram, sdram_name)
-#endif
 
 #endif

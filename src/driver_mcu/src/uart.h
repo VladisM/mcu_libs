@@ -19,9 +19,7 @@ typedef struct{
         gpio_driver_t *rx;
         gpio_driver_t *tx;
     } gpio;
-    #ifndef NDEBUG
     const char *uart_name;
-    #endif
     buffer_t *rx_buffer;
 }uart_driver_t;
 
@@ -43,11 +41,6 @@ unsigned uart_driver_rx_buffer_count(uart_driver_t *uart);
 bool uart_driver_rx_buffer_is_empty(uart_driver_t *uart);
 uint8_t uart_driver_rx_buffer_read(uart_driver_t *uart);
 
-#ifndef NDEBUG
-#define UART_DRIVER_SET_NAME(uart, uart_name) uart_driver_set_name((uart), (uart_name))
 void uart_driver_set_name(uart_driver_t *uart, const char *uart_name);
-#else
-#define UART_DRIVER_SET_NAME(uart, uart_name)
-#endif
 
 #endif

@@ -4,11 +4,10 @@
 
 #include "driver_mcu_debug.h"
 #include "clock.h"
+#include "common.h"
 
 #include <stdlib.h>
 #include <string.h>
-
-#include "common.h"
 
 #define SDCMR_MODE_NORMAL 0
 #define SDCMR_MODE_CCE    1
@@ -18,14 +17,16 @@
 #define SDCMR_MODE_SR     5
 #define SDCMR_MODE_PD     6
 
-#ifndef NDEBUG
+#ifdef DRIVER_MCU_DEBUG_ENABLED
 #define PRINT_SDCR(c) print_sdcr(c)
 void print_sdcr(fmc_driver_t *fmc);
 #else
 #define PRINT_SDCR(c)
 #endif
 
+#ifdef DRIVER_MCU_DEBUG_ENABLED
 static const char* eofr_str = "parameter out of range!";
+#endif
 
 void fmc_driver_init(fmc_driver_t **fmc){
     fmc_driver_t *tmp = (fmc_driver_t *)malloc(sizeof(fmc_driver_t));
@@ -40,10 +41,7 @@ void fmc_driver_init(fmc_driver_t **fmc){
 
     tmp->bank_5_6.device = NULL;
     tmp->bank_5_6.configured = false;
-
-    #ifndef NDEBUG
-    tmp->fmc_name = "N/A";
-    #endif
+    tmp->fmc_name = default_driver_mcu_name;
 
     *fmc = tmp;
 }
@@ -376,11 +374,12 @@ uint32_t fmc_driver_bank_6_get_address(fmc_driver_t *fmc){
     }
 }
 
-#ifndef NDEBUG
+
 void fmc_driver_set_name(fmc_driver_t *fmc, const char *fmc_name){
     fmc->fmc_name = fmc_name;
 }
 
+#ifdef DRIVER_MCU_DEBUG_ENABLED
 void print_sdcr(fmc_driver_t *fmc){
     FMC_Bank5_6_TypeDef *_device = (FMC_Bank5_6_TypeDef *)fmc->bank_5_6.device;
     uint32_t sdcr = _device->SDCR[0];

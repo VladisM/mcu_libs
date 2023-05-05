@@ -4,6 +4,7 @@
 
 #include "driver_mcu_debug.h"
 #include "clock.h"
+#include "common.h"
 
 #include <string.h>
 #include <stdlib.h>
@@ -54,10 +55,7 @@ void i2c_driver_init(i2c_driver_t **i2c, void *device, gpio_driver_t *sda, gpio_
     tmp->device.peripheral_clock = clock_get_peripheral_clock(device);
     tmp->gpio.scl = scl;
     tmp->gpio.sda = sda;
-
-    #ifndef NDEBUG
-    tmp->i2c_name = "N/A";
-    #endif
+    tmp->i2c_name = default_driver_mcu_name;
 
     clock_enable_peripheral_clock(device);
 
@@ -167,8 +165,6 @@ void i2c_driver_reconfigure_clock(i2c_driver_t *i2c){
     _apply_timing_conf(i2c);
 }
 
-#ifndef NDEBUG
 void i2c_driver_set_name(i2c_driver_t *i2c, const char *i2c_name){
     i2c->i2c_name = i2c_name;
 }
-#endif

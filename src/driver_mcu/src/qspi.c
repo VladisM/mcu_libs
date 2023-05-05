@@ -4,6 +4,7 @@
 
 #include "driver_mcu_debug.h"
 #include "clock.h"
+#include "common.h"
 
 #include <string.h>
 #include <stdlib.h>
@@ -94,9 +95,7 @@ void qspi_driver_init(qspi_driver_t **qspi, void *device, uint32_t bus_clock, gp
     tmp->gpio.sck = sck;
     tmp->gpio.ncs = ncs;
 
-    #ifndef NDEBUG
-    tmp->qspi_name = "N/A";
-    #endif
+    tmp->qspi_name = default_driver_mcu_name;
 
     clock_enable_peripheral_clock(device);
 
@@ -408,8 +407,6 @@ bool qspi_driver_reconfigure_peripheral_clock(qspi_driver_t *qspi){
     return true;
 }
 
-#ifndef NDEBUG
 void qspi_driver_set_name(qspi_driver_t *qspi, const char *qspi_name){
     qspi->qspi_name = qspi_name;
 }
-#endif

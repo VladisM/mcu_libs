@@ -1,6 +1,7 @@
 #include "button.h"
 
 #include "driver_dev_debug.h"
+#include "common.h"
 
 #include <stdbool.h>
 #include <string.h>
@@ -22,9 +23,7 @@ void button_driver_init(button_driver_t **button, gpio_driver_t *pin){
     tmp->button_state_n_minus_1 = !gpio_driver_read(tmp->pin);
     tmp->button_state_n_minus_2 = !gpio_driver_read(tmp->pin);
 
-    #ifndef NDEBUG
-    tmp->button_name = "N/A";
-    #endif
+    tmp->button_name = default_driver_dev_name;
 
     *button = tmp;
 }
@@ -43,8 +42,6 @@ bool button_driver_read(button_driver_t *button){
     }
 }
 
-#ifndef NDEBUG
 void button_driver_set_name(button_driver_t *button, const char *button_name){
     button->button_name = button_name;
 }
-#endif

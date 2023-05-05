@@ -4,6 +4,7 @@
 
 #include "driver_mcu_debug.h"
 #include "clock.h"
+#include "common.h"
 
 #include <string.h>
 #include <stdlib.h>
@@ -46,9 +47,7 @@ void uart_driver_init(uart_driver_t **uart, void *device, gpio_driver_t *rx, gpi
 
     buffer_init((buffer_t **)&(tmp->rx_buffer), sizeof(uint8_t), UART_RX_BUFFER_DEFAULT_SIZE);
 
-    #ifndef NDEBUG
-    tmp->uart_name = "N/A";
-    #endif
+    tmp->uart_name = default_driver_mcu_name;
 
     clock_enable_peripheral_clock(device);
 
@@ -146,8 +145,6 @@ uint8_t uart_driver_rx_buffer_read(uart_driver_t *uart){
     }
 }
 
-#ifndef NDEBUG
 void uart_driver_set_name(uart_driver_t *uart, const char *uart_name){
     uart->uart_name = uart_name;
 }
-#endif

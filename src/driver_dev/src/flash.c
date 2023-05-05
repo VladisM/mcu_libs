@@ -1,6 +1,7 @@
 #include "flash.h"
 
 #include "driver_dev_debug.h"
+#include "common.h"
 
 #include <string.h>
 #include <stdlib.h>
@@ -26,6 +27,10 @@
 //TODO: better error handling
 
 static inline qspi_length_t translate_length(flash_driver_t *flash, unsigned length){
+    #ifndef DRIVER_DEV_DEBUG_ENABLED
+    UNUSED(flash);
+    #endif
+
     switch(length){
         case 1: return LENGTH_ONE_B;
         case 2: return LENGTH_TWO_B;
@@ -157,10 +162,7 @@ void flash_driver_init(flash_driver_t **flash, qspi_driver_t *qspi){
 
     tmp->bus.qspi = qspi;
     tmp->enabled = false;
-
-    #ifndef NDEBUG
-    tmp->flash_name = "N/A";
-    #endif
+    tmp->flash_name = default_driver_dev_name;
 
     *flash = tmp;
 }
@@ -230,9 +232,6 @@ uint32_t flash_driver_get_sector_count(flash_driver_t *flash){
     return flash->config.memory_size / flash->config.sector_size;
 }
 
-
-#ifndef NDEBUG
 void flash_driver_set_name(flash_driver_t *flash, const char *flash_name){
     flash->flash_name = flash_name;
 }
-#endif

@@ -18,9 +18,7 @@ typedef struct {
         qspi_driver_t *qspi;
     } bus;
     bool enabled;
-    #ifndef NDEBUG
     const char *flash_name;
-    #endif
 } flash_driver_t;
 
 void flash_driver_init(flash_driver_t **flash, qspi_driver_t *qspi);
@@ -39,11 +37,6 @@ uint32_t flash_driver_get_size(flash_driver_t *flash);
 uint32_t flash_driver_get_sector_size(flash_driver_t *flash);
 uint32_t flash_driver_get_sector_count(flash_driver_t *flash);
 
-#ifndef NDEBUG
-#define FLASH_DRIVER_SET_NAME(flash, flash_name) flash_driver_set_name((flash), (flash_name))
 void flash_driver_set_name(flash_driver_t *flash, const char *flash_name);
-#else
-#define FLASH_DRIVER_SET_NAME(qspi, qspi_name)
-#endif
 
 #endif

@@ -60,10 +60,8 @@ typedef struct{
     uint8_t pin;
     void *device;
     bool enabled;
-    #ifndef NDEBUG
     const char *signal_name;
     const char *port_name;
-    #endif
 } gpio_driver_t;
 
 void gpio_driver_init(gpio_driver_t **gpio, void *device, uint8_t pin);
@@ -76,11 +74,6 @@ bool gpio_driver_read(gpio_driver_t *gpio);
 void gpio_driver_set(gpio_driver_t *gpio, bool value);
 void gpio_driver_toggle(gpio_driver_t *gpio);
 
-#ifndef NDEBUG
-#define GPIO_DRIVER_SET_NAME(gpio, port, signal) gpio_driver_set_name((gpio), (port), (signal))
 void gpio_driver_set_name(gpio_driver_t *gpio, const char *port_name, const char *signal_name);
-#else
-#define GPIO_DRIVER_SET_NAME(gpio, port, signal)
-#endif
 
 #endif

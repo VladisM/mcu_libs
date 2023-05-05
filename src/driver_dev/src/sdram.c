@@ -1,6 +1,7 @@
 #include "sdram.h"
 
 #include "driver_dev_debug.h"
+#include "common.h"
 
 #include <string.h>
 #include <stdlib.h>
@@ -17,10 +18,7 @@ void sdram_driver_init(sdram_driver_t **sdram, fmc_driver_t *fmc){
     memset(tmp, 0, sizeof(sdram_driver_t));
 
     tmp->bus.fmc = fmc;
-
-    #ifndef NDEBUG
-    tmp->sdram_name = "N/A";
-    #endif
+    tmp->sdram_name = default_driver_dev_name;
 
     *sdram = tmp;
 }
@@ -114,8 +112,6 @@ void sdram_driver_write_u32(sdram_driver_t *sdram, uint32_t address, uint32_t le
     }
 }
 
-#ifndef NDEBUG
 void sdram_driver_set_name(sdram_driver_t *sdram, const char *sdram_name){
     sdram->sdram_name = sdram_name;
 }
-#endif

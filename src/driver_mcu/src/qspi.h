@@ -71,9 +71,7 @@ typedef struct{
         gpio_driver_t *sck;
         gpio_driver_t *ncs;
     } gpio;
-    #ifndef NDEBUG
     const char *qspi_name;
-    #endif
 }qspi_driver_t;
 
 void qspi_driver_init(qspi_driver_t **qspi, void *device, uint32_t clock_prescaler, gpio_driver_t *io0, gpio_driver_t *io1, gpio_driver_t *io2, gpio_driver_t *io3, gpio_driver_t *sck, gpio_driver_t *ncs);
@@ -94,11 +92,6 @@ uint32_t qspi_driver_get_bus_clock(qspi_driver_t *qspi);
 bool qspi_driver_reconfigure_peripheral_clock(qspi_driver_t *qspi);
 bool qspi_driver_reconfigure_bus_clock(qspi_driver_t *qspi, uint32_t clock);
 
-#ifndef NDEBUG
-#define QSPI_DRIVER_SET_NAME(qspi, qspi_name) qspi_driver_set_name((qspi), (qspi_name))
 void qspi_driver_set_name(qspi_driver_t *qspi, const char *qspi_name);
-#else
-#define QSPI_DRIVER_SET_NAME(qspi, qspi_name)
-#endif
 
 #endif

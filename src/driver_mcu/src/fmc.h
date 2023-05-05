@@ -33,9 +33,7 @@ typedef enum {
 } fmc_driver_bank_5_6_bank_config_t;
 
 typedef struct{
-    #ifndef NDEBUG
     const char *fmc_name;
-    #endif
     struct {
         void *device;
         bool configured;
@@ -56,11 +54,6 @@ bool fmc_driver_bank_5_6_config(fmc_driver_t *fmc, void *device,
 uint32_t fmc_driver_bank_5_get_address(fmc_driver_t *fmc);
 uint32_t fmc_driver_bank_6_get_address(fmc_driver_t *fmc);
 
-#ifndef NDEBUG
-#define FMC_DRIVER_SET_NAME(fmc, fmc_name) fmc_driver_set_name((fmc), (fmc_name))
 void fmc_driver_set_name(fmc_driver_t *fmc, const char *fmc_name);
-#else
-#define FMC_DRIVER_SET_NAME(fmc, fmc_name)
-#endif
 
 #endif

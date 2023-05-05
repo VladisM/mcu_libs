@@ -4,6 +4,7 @@
 
 #include "driver_mcu_debug.h"
 #include "clock.h"
+#include "common.h"
 
 #include <string.h>
 #include <stdlib.h>
@@ -122,11 +123,8 @@ void gpio_driver_init(gpio_driver_t **gpio, void *device, uint8_t pin){
     tmp->device = device;
     tmp->pin = pin;
     tmp->enabled = false;
-
-    #ifndef NDEBUG
-    tmp->port_name = "N/A";
-    tmp->signal_name = "N/A";
-    #endif
+    tmp->port_name = default_driver_mcu_name;
+    tmp->signal_name = default_driver_mcu_name;
 
     clock_enable_peripheral_clock(device);
 
@@ -171,9 +169,7 @@ void gpio_driver_toggle(gpio_driver_t *gpio){
     _device->ODR ^= (0x1UL << (gpio->pin));
 }
 
-#ifndef NDEBUG
 void gpio_driver_set_name(gpio_driver_t *gpio, const char *port_name, const char *signal_name){
     gpio->port_name = port_name;
     gpio->signal_name = signal_name;
 }
-#endif

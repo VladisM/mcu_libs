@@ -1,6 +1,7 @@
 #include "eeprom.h"
 
 #include "driver_dev_debug.h"
+#include "common.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -44,10 +45,7 @@ void eeprom_driver_init(eeprom_driver_t **eeprom, i2c_driver_t *i2c, uint8_t add
     tmp->bus.i2c = i2c;
     tmp->config.i2c_address = address;
     tmp->enabled = false;
-
-    #ifndef NDEBUG
-    tmp->eeprom_name = "N/A";
-    #endif
+    tmp->eeprom_name = default_driver_dev_name;
 
     *eeprom = tmp;
 }
@@ -139,8 +137,6 @@ uint32_t eeprom_driver_get_size(eeprom_driver_t *eeprom){
     return eeprom->config.memory_size;
 }
 
-#ifndef NDEBUG
 void eeprom_driver_set_name(eeprom_driver_t *eeprom, const char *eeprom_name){
     eeprom->eeprom_name = eeprom_name;
 }
-#endif

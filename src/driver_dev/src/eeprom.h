@@ -20,9 +20,7 @@ typedef struct{
         i2c_driver_t *i2c;
     } bus;
     bool enabled;
-    #ifndef NDEBUG
     const char *eeprom_name;
-    #endif
 } eeprom_driver_t;
 
 void eeprom_driver_init(eeprom_driver_t **eeprom, i2c_driver_t *i2c, uint8_t address);
@@ -37,11 +35,6 @@ void eeprom_driver_write(eeprom_driver_t *eeprom, uint8_t *buffer);
 
 uint32_t eeprom_driver_get_size(eeprom_driver_t *eeprom);
 
-#ifndef NDEBUG
-#define EEPROM_DRIVER_SET_NAME(eeprom, eeprom_name) eeprom_driver_set_name((eeprom), (eeprom_name))
 void eeprom_driver_set_name(eeprom_driver_t *eeprom, const char *eeprom_name);
-#else
-#define EEPROM_DRIVER_SET_NAME(eeprom, eeprom_name)
-#endif
 
 #endif
